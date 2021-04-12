@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULAR MADERA</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="box">
+        <h2>Mesa de río resina </h2>
+            <form  id="miForm" onsubmit="return false">
+                <div class="selectmadera">
+                    <!--Dentro de cada value hay que colocar el precio de cada tipo de madera -->
+                      <select name="selectmadera" id="selectmadera">
+                        <option>Madera</option>
+                        <option id="A1" value="90">Paraíso</option>
+                        <option id="A2" value="124">Laurel</option>
+                        <option id="A3" value="132">Petiribí</option>
+                        <option id="A4" value="144">Zoita</option>
+                        <option id="A5" value="150">Cedro</option>
+                
+                
+                    </select>
+                </div>
+        <div class="inputs">
+                <div class="inputbox">
+                    <input type="number" step="any" id="largo" required><label>Largo(m)</label>
+                </div>
+                <div class="inputbox">
+                     <input type="number" step="any" id="ancho" required><label >Ancho(cm)</label>
+                </div>
+                <div class="inputbox">
+                    <input type="number" step="any" id="espesor" required><label>Espesor(p)</label>
+                </div>
+                <div class="inputbox">
+                <input type="number" step="any" id="anchoderio" required> <label>Ancho de río (cm)</label>
+                </div>
+                <div class="inputbox">
+                    <input type="number" step="any" id="espesor-resina" required><label >Espesor (cm)</label>
+                 </div>
+                </div>
+        
+        
+                </form>             
+                         
+                         
+        
+        <div class="resultados">
+                        
+                 <button id="botonnuevo" onclick="cambios()">Materiales</button>       
+        
+                    <div class="cantidades" id="costos">
+        
+                          <p>Madera</p> <span id="cantidadmadera"></span> <span id="medida">p</span> 
+                          <p>Recina</p>  <span id="cantidadresina"></span> <span id="medida">lts</span>  
+                    </div>
+    
+                    <button id="botonnuevo" onclick="cambios2()">Costo</button> 
+                    <div class="totales" >
+                        <div id="totales">
+                           <p>Madera costo</p> <span id="totalmadera"></span> <span id="medida">$</span>
+                           <p>Recina costo</p> <span id="totalresina"></span> <span id="medida">$</span></div>
+                           <div class="total">
+                           <p>Total</p> <span id="total"></span> <span id="medida">$</span></div>
+        
+                      </div>
+
+                    <div class="botones">
+                     <button onclick=" calculomadera() "> Calcular</button>
+                      <button onclick=" limpiarFormulario()">Nuevo calculo</button>
+                    </div>
+
+                    </div>      
+
+        
+    </div>
+    
+    
+    <script src="main.js"></script>
+</body>
+</html>
+
+
+
+
